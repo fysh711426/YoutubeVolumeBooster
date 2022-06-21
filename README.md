@@ -16,7 +16,7 @@ Drag the slider after clicking the icon, the maximum volume can be boost by 20 t
 ### How to install  
 
 * Download and unzip the package.  
-[releases](https://github.com/fysh711426/YoutubeVolumeBooster/releases)  
+[releases/YoutubeVolumeBooster-v1.0.0.zip](https://github.com/fysh711426/YoutubeVolumeBooster/releases)  
 
 * Go to `chrome://extensions`  
 
