@@ -1,0 +1,22 @@
+﻿body {
+    font-family: sans-serif, 'Lucida Grande', 'Helvetica Neue';
+    font-size: 12px;
+    margin: 0;
+    width: 300px;
+}
+
+#popup {
+    margin: 10px 15px;
+}
+
+#volume {
+    width: 100%;
+}
+
+#volumeText {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #474747;
+}
