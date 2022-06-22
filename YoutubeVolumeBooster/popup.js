@@ -15,10 +15,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 message: 'setVolume',
                 value: newValue
             });
-            chrome.runtime.sendMessage({
-                message: 'setVideoVolume',
-                value: newValue
-            });
+            chrome.tabs.query({ active: true, currentWindow: true },
+                function (tabs) {
+                    var activeTab = tabs[0];
+                    chrome.tabs.sendMessage(activeTab.id, {
+                        message: 'setVideoVolume',
+                        value: newValue
+                    });
+                }
+            );
         }
     );
     chrome.runtime.sendMessage({

@@ -1,20 +1,10 @@
-function setVideoVolume(newValue) {
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        var activeTab = tabs[0];
-        chrome.tabs.sendMessage(activeTab.id, {
-            message: 'setVideoVolume',
-            value: newValue
-        });
-    });
-}
-
-chrome.extension.onMessage.addListener(
+chrome.runtime.onMessage.addListener(
     function request(request, sender, sendResponse) {
         if (request.message === 'onLoaded') {
-            setVideoVolume(parseInt(localStorage["volume"]));
-        }
-        if (request.message === 'setVideoVolume') {
-            setVideoVolume(request.value);
+            chrome.tabs.sendMessage(sender.tab.id, {
+                message: 'setVideoVolume',
+                value: parseInt(localStorage["volume"])
+            });
         }
         if (request.message === 'setVolume') {
             localStorage["volume"] = request.value;
