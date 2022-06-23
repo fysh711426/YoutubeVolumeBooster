@@ -1,7 +1,9 @@
 # YoutubeVolumeBooster  
 
-This is a chrome extension.  
+This is a `chrome extension`.  
 It can boost maximum volume of youtube, which is used to solve the problem that the maximum volume of the laptop is too low.  
+
+> Youtube full screen support.
 
 ---  
 
